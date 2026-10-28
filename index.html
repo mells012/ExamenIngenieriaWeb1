@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Furnito — Furniture Shop Online</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@700;800&family=ABeeZee&family=Actor&family=Anek+Gurmukhi:wght@600&family=Cabin:wght@400;600;700&family=Gabriela&family=Inter:wght@400;500;600;700;800;900&family=Sree+Krushnadevaraya&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ======================= HEADER / NAV ======================= -->
+<header class="header">
+  <nav class="header__nav container">
+    <ul class="header__links">
+      <li><a href="#home" class="header__link">Home</a></li>
+      <li>
+        <a href="#furnitures" class="header__link">Furnitures
+          <img src="assets/icon-chevron-down.svg" alt="" class="header__chevron" />
+        </a>
+      </li>
+      <li><a href="#sale" class="header__link">Sale</a></li>
+    </ul>
+
+    <a href="#home" class="header__logo">Furnito</a>
+
+    <div class="header__actions">
+      <form class="search" role="search">
+        <input class="search__input" type="search" name="q" placeholder="Search for furnitures" aria-label="Search for furnitures" />
+        <button class="search__button" type="submit" aria-label="Search">
+          <img src="assets/icon-search.svg" alt="" />
+        </button>
+      </form>
+
+      <a href="#contact" class="header__link">Contact Us</a>
+
+      <a href="#wishlist" class="icon-btn icon-btn--wishlist" aria-label="Wishlist">
+        <img src="assets/icon-heart.svg" alt="" />
+      </a>
+      <a href="#cart" class="icon-btn icon-btn--cart" aria-label="Cart, 1 item">
+        <img src="assets/icon-cart-badge-union.svg" alt="" />
+        <span class="icon-btn__badge">1</span>
+      </a>
+      <a href="#account" class="icon-btn icon-btn--user" aria-label="Account">
+        <img src="assets/icon-user-oval.svg" alt="" class="icon-btn__head" />
+        <img src="assets/icon-user-box.svg" alt="" class="icon-btn__body" />
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="home">
+  <div class="hero__delivery container">
+    <div class="hero__delivery-item">
+      <span class="hero__truck" aria-hidden="true">
+        <img src="assets/icon-truck-3.svg" alt="" class="hero__truck-body" />
+        <img src="assets/icon-truck-2.svg" alt="" class="hero__truck-cab" />
+        <img src="assets/icon-truck-1.svg" alt="" class="hero__truck-wheel" />
+      </span>
+      Next day Delivery
+    </div>
+    <div class="hero__delivery-item">
+      <strong>Free Shipping</strong> for orders above $300
+    </div>
+  </div>
+
+  <div class="hero__main container">
+    <div class="hero__copy">
+      <h1 class="hero__title">Your Place Will Never Be the Same Again with Our
+        <span class="hero__highlight">Fantastic Furniture.</span>
+      </h1>
+      <a href="#furnitures" class="btn btn--light">Shop Now</a>
+    </div>
+
+    <div class="hero__badge">
+      <div class="hero__badge-shape">
+        <img src="assets/badge-sale-shape.svg" alt="" />
+        <span class="hero__badge-text">MAY Sale</span>
+      </div>
+      <a href="#sale" class="hero__badge-link">Shop Sale</a>
+    </div>
+  </div>
+
+  <div class="hero__illustration container" aria-hidden="true">
+    <img src="assets/hero-illustration.png" alt="" />
+  </div>
+</section>
+
+<!-- ======================= GET INSPIRED ======================= -->
+<section class="inspired container">
+  <div class="inspired__copy">
+    <h2 class="inspired__title">Get Inspired</h2>
+    <p class="inspired__text">Take a look at our costomer's own spaces where you can get style tips and tricks.</p>
+    <a href="#inspired" class="btn btn--outline">Learn More</a>
+  </div>
+  <div class="inspired__photo">
+    <img src="assets/get-inspired.jpg" alt="Living room styled with teal curtains and warm lighting" />
+  </div>
+</section>
+
+<!-- ======================= CATEGORIES ======================= -->
+<section class="categories" id="furnitures">
+  <div class="container">
+    <h2 class="section-title categories__title">Furnitures</h2>
+
+    <div class="categories__row" id="categoriesRow">
+      <!-- Generado dinámicamente por script.js (ver array `categories`) -->
+      <button class="categories__next" aria-label="Next categories" type="button">
+        <img src="assets/icon-chevron-down.svg" alt="" />
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= WHAT PEOPLE LOVE ======================= -->
+<section class="loved container">
+  <div class="loved__head">
+    <h2 class="section-title">What People Love</h2>
+    <a href="#sale" class="loved__more">view more</a>
+  </div>
+
+  <div class="loved__grid" id="productGrid">
+    <!-- Generado dinámicamente por script.js (ver array `products`) -->
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer" id="contact">
+  <div class="container footer__grid">
+    <nav class="footer__links" aria-label="Footer">
+      <a href="#explore">Explore</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#help">Help</a>
+    </nav>
+
+    <div class="newsletter">
+      <p class="newsletter__text">Want to know when the items go on sale? get notified!</p>
+      <form class="newsletter__form">
+        <input class="newsletter__input" type="email" placeholder="Type in your email Address" aria-label="Email address" required />
+        <button class="newsletter__button" type="submit">Send</button>
+      </form>
+    </div>
+
+    <div class="footer__contact">
+      <a href="mailto:furnito@gmail.com" class="footer__contact-item">
+        <img src="assets/icon-mail.svg" alt="" />
+        furnito@gmail.com
+      </a>
+      <a href="tel:+65678253" class="footer__contact-item">
+        <img src="assets/icon-phone.svg" alt="" />
+        +65678253
+      </a>
+    </div>
+
+    <div class="footer__location">
+      <p class="footer__address">
+        <img src="assets/icon-location.svg" alt="" />
+        Suntec City Mall Tower 3<br />East Wing, #02-728/729/730
+      </p>
+      <div class="footer__social">
+        <span>Follow us:</span>
+        <a href="#" aria-label="Instagram"><img src="assets/icon-instagram.svg" alt="" /></a>
+        <a href="#" aria-label="Facebook"><img src="assets/icon-facebook.svg" alt="" /></a>
+        <a href="#" aria-label="LinkedIn"><img src="assets/icon-linkedin.svg" alt="" /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

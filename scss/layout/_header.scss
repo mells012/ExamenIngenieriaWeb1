@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+
+.header {
+  background: $gold;
+
+  &__nav {
+    @include flex(center, space-between, 24px);
+    padding-top: 18px;
+    padding-bottom: 18px;
+    flex-wrap: wrap;
+  }
+
+  &__links {
+    @include flex(center, flex-start, 32px);
+    flex: 1;
+  }
+
+  &__link {
+    @include flex(center, flex-start, 8px);
+    display: inline-flex;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: $white;
+    white-space: nowrap;
+  }
+
+  &__chevron { width: 10px; height: 6px; }
+
+  &__logo {
+    font-family: $font-logo;
+    font-size: 2rem;
+    color: $dark;
+    white-space: nowrap;
+  }
+
+  &__actions {
+    @include flex(center, flex-end, 24px);
+    flex: 1;
+    flex-wrap: wrap;
+  }
+
+  @include respond('mobile') {
+    &__links { order: 2; width: 100%; justify-content: center; }
+    &__logo { order: 1; }
+    &__actions { order: 3; width: 100%; justify-content: center; }
+  }
+}

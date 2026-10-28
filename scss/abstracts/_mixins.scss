@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// Flexbox helper: row with alignment, justification and optional gap
+@mixin flex($align: center, $justify: flex-start, $gap: null) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  @if $gap { gap: $gap; }
+}
+
+// Media query helper: @include respond('mobile') { ... }  => max-width
+@mixin respond($name) {
+  @media (max-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}

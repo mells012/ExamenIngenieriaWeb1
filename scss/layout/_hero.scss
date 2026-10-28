@@ -1,0 +1,115 @@
+@use '../abstracts' as *;
+
+.hero {
+  background: $navy;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 220px;
+
+  &__delivery {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-top: 18px;
+    color: #dfdfdf;
+    font-size: .9rem;
+  }
+
+  &__delivery-item {
+    @include flex(center, flex-start, 10px);
+    display: inline-flex;
+
+    strong { color: $white; }
+  }
+
+  &__truck {
+    position: relative;
+    width: 24px;
+    height: 25px;
+    display: inline-block;
+
+    img { position: absolute; }
+  }
+
+  &__truck-body { inset: 0; }
+  &__truck-cab { left: 15px; top: 0; width: 9px; }
+  &__truck-wheel { left: 13px; top: 14px; width: 7px; }
+
+  &__main {
+    @include flex(flex-start, space-between, 40px);
+    padding-top: 70px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__copy { max-width: 620px; }
+
+  &__title {
+    font-family: $font-hero;
+    font-weight: 400;
+    font-size: 2.15rem;
+    line-height: 1.3;
+    color: $white;
+    margin: 0 0 32px;
+  }
+
+  &__highlight {
+    font-family: $font-hero-accent;
+    color: $highlight;
+  }
+
+  &__badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  &__badge-shape {
+    position: relative;
+    width: 200px;
+
+    img { width: 100%; }
+  }
+
+  &__badge-text {
+    @include flex(center, center);
+    position: absolute;
+    inset: 0;
+    font-family: $font-display;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: $navy;
+    text-align: center;
+    line-height: 1.15;
+    white-space: pre-line;
+  }
+
+  &__badge-link {
+    margin-top: 10px;
+    color: $white;
+    font-family: $font-script;
+    font-size: 1.1rem;
+    text-decoration: underline;
+  }
+
+  &__illustration {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    width: 100%;
+    pointer-events: none;
+
+    img { width: 420px; max-width: 55vw; }
+  }
+
+  @include respond('mobile') {
+    padding-bottom: 180px;
+
+    &__main { padding-top: 40px; }
+    &__title { font-size: 1.6rem; }
+    &__illustration img { width: 280px; max-width: 70vw; }
+  }
+}

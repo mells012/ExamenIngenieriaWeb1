@@ -1,0 +1,23 @@
+/* =========================================================
+   Furnito — Furniture Shop Online
+   Built from the Figma design "09 - Furniture Shop Online"
+   Arquitectura: abstracts / base / layout / components (BEM)
+   ========================================================= */
+
+@use 'base/base';
+
+@use 'layout/container';
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/inspired';
+@use 'layout/categories';
+@use 'layout/loved';
+@use 'layout/footer';
+
+@use 'components/btn';
+@use 'components/section-title';
+@use 'components/search';
+@use 'components/icon-btn';
+@use 'components/category';
+@use 'components/product-card';
+@use 'components/newsletter';

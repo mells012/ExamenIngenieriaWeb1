@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+.loved {
+  padding: 64px 32px;
+
+  &__head {
+    @include flex(baseline, space-between);
+    margin-bottom: 32px;
+  }
+
+  &__more {
+    font-family: $font-script;
+    font-size: 1.1rem;
+    text-decoration: underline;
+    color: $dark;
+  }
+
+  // CSS Grid: auto-fit columns
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+}

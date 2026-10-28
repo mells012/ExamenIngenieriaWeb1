@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+.section-title {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+  margin: 0;
+}

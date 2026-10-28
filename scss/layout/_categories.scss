@@ -1,0 +1,37 @@
+@use '../abstracts' as *;
+
+.categories {
+  background: $light-bg;
+  padding: 48px 0 64px;
+
+  &__title { margin-bottom: 40px; }
+
+  &__row {
+    @include flex(flex-start, flex-start, 40px);
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  &__next {
+    @include flex(center, center);
+    align-self: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #7b7b7b;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+
+    img {
+      width: 10px;
+      transform: rotate(-90deg);
+      filter: invert(1);
+    }
+  }
+
+  @include respond('mobile') {
+    &__row { justify-content: center; }
+    &__next { display: none; }
+  }
+}

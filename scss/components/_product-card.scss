@@ -1,0 +1,62 @@
+@use '../abstracts' as *;
+
+.product-card {
+  background: $light-bg;
+  border-radius: 20px;
+  overflow: hidden;
+
+  &__image-wrap { position: relative; }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 4 / 2.5;
+    object-fit: cover;
+  }
+
+  &__add {
+    @include flex(center, center);
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: $navy;
+    cursor: pointer;
+    transition: transform .15s ease;
+
+    &:hover { transform: scale(1.1); }
+
+    &--added { transform: scale(1.25); background: $gold; }
+
+    img { width: 18px; }
+  }
+
+  &__info { padding: 18px 20px 22px; }
+
+  &__title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: $navy;
+    margin: 0 0 10px;
+  }
+
+  &__bottom { @include flex(center, space-between); }
+
+  &__price {
+    font-weight: 900;
+    font-size: 1.15rem;
+    color: $navy;
+  }
+
+  &__swatches { @include flex(center, flex-end, 6px); }
+
+  &__swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .2);
+  }
+}

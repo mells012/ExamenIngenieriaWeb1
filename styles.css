@@ -1,0 +1,676 @@
+@charset "UTF-8";
+/* =========================================================
+   Furnito — Furniture Shop Online
+   Built from the Figma design "09 - Furniture Shop Online"
+   Arquitectura: abstracts / base / layout / components (BEM)
+   ========================================================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #252930;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.header {
+  background: #bc983c;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  flex-wrap: wrap;
+}
+.header__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+  flex: 1;
+}
+.header__link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  display: inline-flex;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff;
+  white-space: nowrap;
+}
+.header__chevron {
+  width: 10px;
+  height: 6px;
+}
+.header__logo {
+  font-family: "Gabriela", serif;
+  font-size: 2rem;
+  color: #252930;
+  white-space: nowrap;
+}
+.header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+@media (max-width: 760px) {
+  .header__links {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  .header__logo {
+    order: 1;
+  }
+  .header__actions {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.hero {
+  background: #2b495e;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 220px;
+}
+.hero__delivery {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  color: #dfdfdf;
+  font-size: 0.9rem;
+}
+.hero__delivery-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  display: inline-flex;
+}
+.hero__delivery-item strong {
+  color: #ffffff;
+}
+.hero__truck {
+  position: relative;
+  width: 24px;
+  height: 25px;
+  display: inline-block;
+}
+.hero__truck img {
+  position: absolute;
+}
+.hero__truck-body {
+  inset: 0;
+}
+.hero__truck-cab {
+  left: 15px;
+  top: 0;
+  width: 9px;
+}
+.hero__truck-wheel {
+  left: 13px;
+  top: 14px;
+  width: 7px;
+}
+.hero__main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 70px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+.hero__copy {
+  max-width: 620px;
+}
+.hero__title {
+  font-family: "Actor", sans-serif;
+  font-weight: 400;
+  font-size: 2.15rem;
+  line-height: 1.3;
+  color: #ffffff;
+  margin: 0 0 32px;
+}
+.hero__highlight {
+  font-family: "ABeeZee", sans-serif;
+  color: #ffd569;
+}
+.hero__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+.hero__badge-shape {
+  position: relative;
+  width: 200px;
+}
+.hero__badge-shape img {
+  width: 100%;
+}
+.hero__badge-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  font-family: "Anek Gurmukhi", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #2b495e;
+  text-align: center;
+  line-height: 1.15;
+  white-space: pre-line;
+}
+.hero__badge-link {
+  margin-top: 10px;
+  color: #ffffff;
+  font-family: "Sree Krushnadevaraya", serif;
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+.hero__illustration {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  width: 100%;
+  pointer-events: none;
+}
+.hero__illustration img {
+  width: 420px;
+  max-width: 55vw;
+}
+@media (max-width: 760px) {
+  .hero {
+    padding-bottom: 180px;
+  }
+  .hero__main {
+    padding-top: 40px;
+  }
+  .hero__title {
+    font-size: 1.6rem;
+  }
+  .hero__illustration img {
+    width: 280px;
+    max-width: 70vw;
+  }
+}
+
+.inspired {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+  padding-top: 90px;
+  padding-bottom: 56px;
+}
+.inspired__copy {
+  max-width: 420px;
+}
+.inspired__title {
+  font-family: "Anek Gurmukhi", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #2b495e;
+  margin: 0 0 16px;
+}
+.inspired__text {
+  color: #8d8d8d;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+.inspired__photo {
+  flex: 1;
+  min-width: 280px;
+  max-width: 480px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}
+.inspired__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 760px) {
+  .inspired {
+    flex-direction: column;
+    text-align: center;
+  }
+  .inspired__copy {
+    max-width: 100%;
+  }
+}
+
+.categories {
+  background: #f5f5f5;
+  padding: 48px 0 64px;
+}
+.categories__title {
+  margin-bottom: 40px;
+}
+.categories__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.categories__next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #7b7b7b;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+.categories__next img {
+  width: 10px;
+  transform: rotate(-90deg);
+  filter: invert(1);
+}
+@media (max-width: 760px) {
+  .categories__row {
+    justify-content: center;
+  }
+  .categories__next {
+    display: none;
+  }
+}
+
+.loved {
+  padding: 64px 32px;
+}
+.loved__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.loved__more {
+  font-family: "Sree Krushnadevaraya", serif;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #252930;
+}
+.loved__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.footer {
+  background: #2b495e;
+  color: #ffffff;
+  padding: 56px 0 40px;
+  margin-top: 40px;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 40px 56px;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-self: start;
+}
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  display: inline-flex;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+}
+.footer__contact-item img {
+  width: 18px;
+}
+.footer__location {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-end;
+  text-align: right;
+}
+.footer__address {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  margin: 0;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.footer__address img {
+  width: 14px;
+  margin-top: 3px;
+}
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+}
+.footer__social img {
+  width: 28px;
+}
+@media (max-width: 960px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer__location {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+@media (max-width: 760px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn--light {
+  background: #ffffff;
+  color: #2b495e;
+}
+.btn--light:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+.btn--outline {
+  background: #ffffff;
+  color: #2b495e;
+  border-color: #b4b4b4;
+}
+
+.section-title {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background: #2b495e;
+  border-radius: 10px;
+  padding: 12px 18px;
+  width: 280px;
+  max-width: 100%;
+}
+.search__input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  width: 100%;
+}
+.search__input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+.search__button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+}
+.icon-btn--cart {
+  width: 42px;
+}
+.icon-btn--user {
+  background: #2b495e;
+  border-radius: 50%;
+}
+.icon-btn--active {
+  opacity: 0.6;
+}
+.icon-btn__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -6px;
+  right: -2px;
+  background: #ffd569;
+  color: #252930;
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.icon-btn__head, .icon-btn__body {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon-btn__head {
+  top: 7px;
+  width: 10px;
+}
+.icon-btn__body {
+  bottom: 4px;
+  width: 18px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 190px;
+}
+.category__photo {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #b4b4b4;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.category__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.category__label {
+  font-family: "Sree Krushnadevaraya", serif;
+  font-size: 1.3rem;
+  color: #252930;
+}
+
+.product-card {
+  background: #f5f5f5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.product-card__image-wrap {
+  position: relative;
+}
+.product-card__image {
+  width: 100%;
+  aspect-ratio: 4/2.5;
+  object-fit: cover;
+}
+.product-card__add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #2b495e;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.product-card__add:hover {
+  transform: scale(1.1);
+}
+.product-card__add--added {
+  transform: scale(1.25);
+  background: #bc983c;
+}
+.product-card__add img {
+  width: 18px;
+}
+.product-card__info {
+  padding: 18px 20px 22px;
+}
+.product-card__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2b495e;
+  margin: 0 0 10px;
+}
+.product-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-card__price {
+  font-weight: 900;
+  font-size: 1.15rem;
+  color: #2b495e;
+}
+.product-card__swatches {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+.product-card__swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.newsletter__text {
+  margin: 0 0 14px;
+  font-family: "Cabin", sans-serif;
+  font-size: 0.95rem;
+}
+.newsletter__form {
+  display: flex;
+  max-width: 420px;
+}
+.newsletter__input {
+  flex: 1;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  padding: 0 18px;
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: rgba(105, 105, 105, 0.8);
+}
+.newsletter__button {
+  background: #bc983c;
+  color: #ffffff;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  padding: 0 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */

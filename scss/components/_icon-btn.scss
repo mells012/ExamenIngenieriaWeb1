@@ -1,0 +1,42 @@
+@use '../abstracts' as *;
+
+.icon-btn {
+  @include flex(center, center);
+  position: relative;
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+
+  &--cart { width: 42px; }
+
+  &--user {
+    background: $navy;
+    border-radius: 50%;
+  }
+
+  &--active { opacity: .6; }
+
+  &__badge {
+    @include flex(center, center);
+    position: absolute;
+    top: -6px;
+    right: -2px;
+    background: $highlight;
+    color: $dark;
+    font-size: .65rem;
+    font-weight: 700;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+  }
+
+  &__head,
+  &__body {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__head { top: 7px; width: 10px; }
+  &__body { bottom: 4px; width: 18px; }
+}
