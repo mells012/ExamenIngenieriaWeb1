@@ -15,10 +15,39 @@ const categories = [
   { id: 'bedroom',      name: 'Bedroom',     image: 'assets/category-bedroom.jpg' },
   { id: 'dining',       name: 'Dining',      image: 'assets/category-dining.jpg' },
   { id: 'lights',       name: 'Lights',      image: 'assets/category-lights.jpg' },
+
 ];
 
 const products = [
   {
+    id: 'sofa-1699',
+    name: '3 - seater Leather Sofa',
+    price: 1699,
+    image: 'assets/product-sofa-1699.jpg',
+    colors: ['#7B0101', '#2B495E', '#D5986C'],
+  },
+  {
+    id: 'sofa-79',
+    name: '3 - seater Sofa',
+    price: 79,
+    image: 'assets/product-sofa-79.jpg',
+    colors: ['#AA765B'],
+  },
+  {
+    id: 'lamp-349',
+    name: 'Pendent Lamp - 2 Bulbs',
+    price: 349,
+    image: 'assets/product-lamp-349.jpg',
+    colors: [],
+  },
+  {
+    id: 'table-510',
+    name: "Kid's Study Table - Royal White",
+    price: 510,
+    image: 'assets/product-table-510.jpg',
+    colors: ['#FFFFFF', '#C6C6C6', '#000000'],
+  },
+    {
     id: 'sofa-1699',
     name: '3 - seater Leather Sofa',
     price: 1699,
