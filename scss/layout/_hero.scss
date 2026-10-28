@@ -101,6 +101,7 @@
     bottom: -40px;
     width: 100%;
     pointer-events: none;
+    text-align: center;
 
     img { width: 420px; max-width: 55vw; }
   }
@@ -111,5 +112,10 @@
     &__main { padding-top: 40px; }
     &__title { font-size: 1.6rem; }
     &__illustration img { width: 280px; max-width: 70vw; }
+  }
+
+  @media (max-width: 600px) {
+    &__illustration { display: none; }
+    padding-bottom: 60px;
   }
 }

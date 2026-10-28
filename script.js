@@ -145,6 +145,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Carrusel de productos: botones prev/next sobre el scroll del grid
+  const prevBtn = document.getElementById('productPrev');
+  const nextProductBtn = document.getElementById('productNext');
+  if (productGrid && prevBtn && nextProductBtn) {
+    const step = () => {
+      const card = productGrid.querySelector('.product-card');
+      return card ? card.offsetWidth + 24 : 284;
+    };
+    const updateNav = () => {
+      prevBtn.disabled = productGrid.scrollLeft <= 0;
+      nextProductBtn.disabled =
+        productGrid.scrollLeft + productGrid.clientWidth >= productGrid.scrollWidth - 1;
+    };
+    prevBtn.addEventListener('click', () => productGrid.scrollBy({ left: -step() }));
+    nextProductBtn.addEventListener('click', () => productGrid.scrollBy({ left: step() }));
+    productGrid.addEventListener('scroll', updateNav);
+    window.addEventListener('resize', updateNav);
+    updateNav();
+  }
+
   // Newsletter form
   const newsletterForm = document.querySelector('.newsletter__form');
   if (newsletterForm) {
